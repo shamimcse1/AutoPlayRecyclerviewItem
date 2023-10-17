@@ -12,7 +12,7 @@ import java.util.TimerTask
 
 
 class MainActivity : AppCompatActivity() {
-    var position = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         // This loop will create 20 Views containing
         // the image with the count of view
-        for (i in 0..5) {
+        for (i in 0..2) {
             data.add(ItemsViewModel(R.drawable.my_image, "Item " + i))
         }
 
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         // Setting the Adapter with the recyclerview
         recyclerview.adapter = adapter
 
-        position = data.size
+        var position = data.size
         val audio = listOf<Int>(R.raw.fly, R.raw.rose,R.raw.rose)
 
         val timer = Timer()
